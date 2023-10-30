@@ -8,7 +8,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:yz4434@cumc.columbia.edu
     - icon: fa-github fa-lg
-      href: https://github.com/Yingting27/Yingting_Zhang.github.io
+      href: https://github.com/Yingting27/Yingting.github.io.git
 output:
   html_document:
     theme: journal
