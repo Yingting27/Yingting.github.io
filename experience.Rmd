@@ -37,6 +37,12 @@ Muskingum University Picture Above
 * Conducted literature review tables and designed hypotheses/research questions independently 
 * Conducted a proposal for a research paper
 
+<br>
+**Skill Experience**
+
+During this semester, I am taking the Data Science Course (P8105) and try to learn R programming to figure out different questions. Here is an [example](https://github.com/Yingting27/data_wrangling_1) showing what I learned and what I did in the class 
+
+
 
 
 
