@@ -1,0 +1,48 @@
+---
+title: "Academic and Professional Experiences"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+<br>
+
+**Academic Background**
+
+*[Columbia University, Mailman School of Public Health](https://www.publichealth.columbia.edu/) (Sept 2022 - May 2024)*
+
+I am a master of public health student in the Epidemiology Department, with certificate in Chronic Disease. My main courses include **Application of Epidemiological Research, Analysis of Categorical Data,Clinical Epidemiology**. To learn more [details](https://www.publichealth.columbia.edu/academics/degrees/master-public-health/certificates/certificate-requirements).
+
+
+![](images/columbia.jpg)
+Columbia University Picture Above
+
+<br>
+
+*[Muskingum University](https://www.muskingum.edu/) (Sept 2018 - May 2022)*
+
+During the year of undergraduate, I studied in Muskingum Univerisity with the major of public health. My main courses included **Personal Health, Health Policy, Public Health & Epidemiology**
+
+
+![](images/muskingum.jpg)
+Muskingum University Picture Above
+
+<br>
+**Professional Experience**
+
+*Trauma and PTSD symptoms in Rwanda Implications for Prosocial Behaviors (May 2023 - Present)*
+
+* Analyzed IRB dataset of over 500 sample size by using SAS
+* Applied statistical methods (logistic regression models) and analyzed distribution using SAS
+* Conducted literature review tables and designed hypotheses/research questions independently 
+* Conducted a proposal for a research paper
+
+
+
+
+
+
+
+
+
+
