@@ -1,0 +1,69 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(p8105.datasets)
+library(plotly)
+library(tidyverse)
+library(dplyr)
+
+data("instacart")
+
+select_instacart = 
+  instacart |> 
+  as_tibble() |> 
+  filter(
+    department == "frozen"
+  ) |> 
+  select(order_hour_of_day,product_name, aisle,order_dow)
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+Box Plot
+```{r}
+
+select_instacart |> 
+  group_by(aisle) |>
+     plot_ly(y = ~order_hour_of_day, color = ~aisle,
+          type = "box", colors = "viridis")
+
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+Scatterplot
+```{r}
+select_instacart |> 
+  group_by(aisle) |> 
+  count(product_name) |> 
+  mutate(rank = min_rank(desc(n))) |> 
+  filter(rank < 10) |> 
+  arrange(desc(n)) |>  
+  plot_ly(x = ~aisle, y = ~n,
+          type = "scatter", mode = "markers", color = "viridis")
+ 
+```
+
+### Chart C
+Bar Plot
+```{r}
+select_instacart |> 
+  count(aisle) |> 
+  mutate(aisle = fct_reorder(aisle, n)) |> 
+  plot_ly(x = ~aisle, y = ~n, type = "bar", color = ~aisle)
+
+```
+
