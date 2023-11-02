@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -21,26 +21,26 @@ select_instacart =
   filter(
     department == "frozen"
   ) |> 
-  select(order_hour_of_day,product_name, aisle,order_dow)
+  select(order_hour_of_day,product_name, aisle,order_dow, 
+         order_number, days_since_prior_order)
 
 ```
 
-Column {data-width=650}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart A
-Box Plot
+Box Plot for Order Hours of Day on Monday Based on Aisle in Frozen Department
 ```{r}
 
 select_instacart |> 
-  group_by(aisle) |>
+  filter(order_dow == 1) |> 
      plot_ly(y = ~order_hour_of_day, color = ~aisle,
           type = "box", colors = "viridis")
 
-
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart B
@@ -51,14 +51,14 @@ select_instacart |>
   count(product_name) |> 
   mutate(rank = min_rank(desc(n))) |> 
   filter(rank < 10) |> 
-  arrange(desc(n)) |>  
-  plot_ly(x = ~aisle, y = ~n,
+  arrange(desc(n)) |> 
+  plot_ly(x = ~product_name, y = ~n, 
           type = "scatter", mode = "markers", color = "viridis")
- 
+
 ```
 
 ### Chart C
-Bar Plot
+Bar Plot of Numbers of Aisle in Frozen Department
 ```{r}
 select_instacart |> 
   count(aisle) |> 
