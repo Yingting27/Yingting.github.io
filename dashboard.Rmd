@@ -55,7 +55,7 @@ select_instacart |>
   summarize(avg_reorder_rate = mean(reordered)) |> 
   plot_ly(x = ~order_dow, y = ~avg_reorder_rate, type = 'scatter', mode = 'lines+markers') |> 
   layout(
-    title = "Average Reorder Rate by Day of the Week",
+    title = "Average Reorder Rate by Day of the Week in Frozen Department",
     xaxis = list(title = "Day of the Week"),
     yaxis = list(title = "Average Reorder Rate")
   )
