@@ -70,7 +70,7 @@ select_instacart |>
   plot_ly(x = ~aisle, y = ~n, type = "bar", color = ~aisle) |> 
     layout(
     title = "Numbers of Aisle in Frozen Department",
-    xaxis = list(title = "Asile"),
+    xaxis = list(title = "Aisle"),
     yaxis = list(title = "Numbers of Aisle")
   )
 
